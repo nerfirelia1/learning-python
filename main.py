@@ -1,6 +1,7 @@
 from math import sqrt
 from math import pi
 from random import randint
+from random import uniform
 
 #-------------------------- funkcje wprowadzenie-----------------------------------------
 def potegowanie(x,y):
@@ -40,10 +41,12 @@ print("Iloczyn a i b wynosi: ", a*b)
 print("Iloraz a i b wynosi: ", a/b)
 print("pierwiastek z a+b wynosi: ", sqrt(a+b))
 print("a do b oraz b do a wynosi: ", a**b , b**a)
-#zadanie 5c
+
+#zadanie 5
 r = int(input("podaj promien kola(r): "))
 print("pole kola wynosi: ", pi * (r*r))
 print("obwud kola wynosi: ",2 * pi * r)
+
 #zadanie 6
 a =  randint(0,10)
 zgadnij = int(input("zgadnij jaka to liczba, z zakresu od 0 do 10: "))
@@ -56,6 +59,19 @@ while zgadnij != a:
 
 print("brawo zgadnoles")
 print("odpowiedz to: " , a)
+
+#zadanie 10
+a =  uniform(3,16)
+print(a)
+
+#zadania listy
+a = [2,4,10,64]
+print(a[0])
+x = a[0]
+y = a[3]
+xy =[x, y]
+n = int(input("podaj n: " ))
+print(xy)
 
 
 
