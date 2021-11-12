@@ -84,3 +84,5 @@ except (TypeError, ZeroDivisionError):
 except IndexError:
     print("nie istnieje taka lista")
 
+
+
