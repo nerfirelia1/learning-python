@@ -2,6 +2,7 @@ from math import sqrt
 from math import pi
 from random import randint
 from random import uniform
+from math import pi as liczbapi
 
 #-------------------------- funkcje wprowadzenie-----------------------------------------
 def potegowanie(x,y):
@@ -70,19 +71,16 @@ print(a[0])
 x = a[0]
 y = a[3]
 xy =[x, y]
-n = int(input("podaj n: " ))
 print(xy)
 
 
-
-
-
-
-
-
-
-
-
-
-
+#-------------------------wyjatki (try,except) -----------------------------------------
+try:
+    print(4/0)
+    print(x+"asd")
+    lista=[]
+except (TypeError, ZeroDivisionError):
+    print("wystąpił błąd")
+except IndexError:
+    print("nie istnieje taka lista")
 
