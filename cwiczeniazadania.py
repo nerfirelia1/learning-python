@@ -13,7 +13,7 @@ print("Hello " + name)
 
 def awesome_func(x, y):
     return x**y
-sdefrewfer
+
 
 print(awesome_func(2, 4))
 
