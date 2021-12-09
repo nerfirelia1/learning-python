@@ -49,3 +49,4 @@ print(ile)
 ile2 = a.count("e")
 print(ile2)
 
+
