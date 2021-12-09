@@ -116,6 +116,23 @@ def licz(x,y):
 licz(4,9)
 
 
+#15
+# x = godziny
+# y = minuty
+# z = sekundy
+
+z = int(input("Podaj sekundy: "))
+x = z//3600
+r = z%3600
+y = r//60
+r1 = z%60
+print("godzin: ", x)
+print("minut: ", y)
+print("sekund: ", r1)
+
+
+
+
 
 
 
