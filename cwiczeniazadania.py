@@ -1,3 +1,4 @@
+""""
 def hello(name):
     print(f"Hello {name}")
 
@@ -129,7 +130,7 @@ r1 = z%60
 print("godzin: ", x)
 print("minut: ", y)
 print("sekund: ", r1)
-
+"""
 
 
 
