@@ -69,7 +69,7 @@ if palindromiczna == liczbaoryginalna:
     print("Liczby są te same")
 else:
     print("liczby są różne")
-)0
+
 
 b = int(input("podaj liczbe:"))
 liczba = b
@@ -77,9 +77,63 @@ while b>0:
     x = b%10
     print(x, end=" ")
     b = b//10
-"""
-for x in range(1,11):
-    for i in range(1,11):
+
+for x in range(1,12):
+    for i in range(1,12):
         print(x*i, end=" ")
     print()
+    """
+"""
+for i in range(1,6):
+    for x in range(i,6):
+        print("*", end=" ")
+    print()
 
+a = int(input("Podaj liczbe: "))
+n = int(input("podaj n: "))
+wynik = 1
+for i in range(n):
+    wynik = wynik * a
+print(wynik)
+"""
+""""
+print("jestem","Adam",sep="**")
+liczba = 123.45678
+print("%.3f" % liczba)
+"""
+"""
+lista = []
+for i in range(1,6):
+    a = float(input("podaj element: "))
+    lista.append(a)
+print(lista)
+"""
+"""
+imie1, imie2, imie3 = input("imie: ").split()
+print(imie1,imie2,imie3)
+"""
+"""
+suma=0
+n=10
+
+for i in range(0,n+1):
+    suma =suma+i
+print(suma)
+"""
+"""
+liczby = [12,15,75,78,150,152,155,365,369,45,525,50]
+for liczba in liczby:
+    if liczba % 5==0 and liczba<=150:
+        print(liczba)
+    elif liczba >500:
+        break
+"""
+x = int(input("podaj liczbe: "))
+suma = 0
+licznik = 0
+while  x > 0:
+    a = x%10
+    suma = suma+a
+    licznik = licznik+1
+    x= x//10
+print(suma,licznik)
