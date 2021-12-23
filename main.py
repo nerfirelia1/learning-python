@@ -86,4 +86,13 @@ except IndexError:
     print("nie istnieje taka lista")
 """
 
+try:
+    print(4/0)
+    print(x+"asd")
+    lista=[]
+except (TypeError, ZeroDivisionError):
+    print("wystąpił błąd")
+except IndexError:
+    print("nie istnieje taka lista")
+
 

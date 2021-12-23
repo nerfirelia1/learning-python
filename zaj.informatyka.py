@@ -69,7 +69,7 @@ if palindromiczna == liczbaoryginalna:
     print("Liczby są te same")
 else:
     print("liczby są różne")
-
+)0
 
 b = int(input("podaj liczbe:"))
 liczba = b
@@ -77,9 +77,9 @@ while b>0:
     x = b%10
     print(x, end=" ")
     b = b//10
-
+"""
 for x in range(1,11):
     for i in range(1,11):
         print(x*i, end=" ")
     print()
-"""
+
