@@ -266,7 +266,7 @@ for i in range(1,n+1):
     silnia = silnia * i
 print(silnia)
 """
-b = int(input("podaj liczbe:"))b
+b = int(input("podaj liczbe:"))
 while b>0:
     x = b%10
     print(x, end=" ")

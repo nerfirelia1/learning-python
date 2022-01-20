@@ -143,13 +143,6 @@ for i in range(1,a+1):
         print("*", end=" ")
     print()
 
-t = int(input("podaj liczbe: "))
-o=0
-wynik = 0
-
-
-
-
 
 def silnia(n):
     if n > 1:
