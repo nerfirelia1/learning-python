@@ -1,4 +1,4 @@
-"""
+
 from math import sqrt
 from math import pi
 from random import randint
@@ -84,7 +84,7 @@ except (TypeError, ZeroDivisionError):
     print("wystąpił błąd")
 except IndexError:
     print("nie istnieje taka lista")
-"""
+
 
 try:
     print(4/0)
