@@ -70,14 +70,14 @@ if palindromiczna == liczbaoryginalna:
 else:
     print("liczby są różne")
 
-
+"""
 b = int(input("podaj liczbe:"))
 liczba = b
 while b>0:
     x = b%10
     print(x, end=" ")
     b = b//10
-
+"""
 for x in range(1,12):
     for i in range(1,12):
         print(x*i, end=" ")
@@ -128,6 +128,7 @@ for liczba in liczby:
     elif liczba >500:
         break
 """
+"""
 x = int(input("podaj liczbe: "))
 suma = 0
 licznik = 0
@@ -137,3 +138,157 @@ while  x > 0:
     licznik = licznik+1
     x= x//10
 print(suma,licznik)
+"""
+"""
+for i in range(1,6):
+    a = 6-i
+    for x in range(i,6):
+        print(a, end=" ")
+        a = a-1
+    print()
+
+for i in range(-10,0):
+    print(i)
+"""
+"""
+for i in range(-1,-11,-1):
+    print(i)
+for i in range(10,0,-1):
+    print(i)
+for i in range(10,0,-2):
+    print(i)
+for i in range(17,0,-5):
+    print(i)
+"""
+
+"""
+
+start = 0
+koniec = 100
+
+for i in range(start,koniec+1):
+    if i > 1:
+
+        for x in range(2,i):
+            if  i%x==0:
+                break
+        else:
+            print(i)
+"""
+"""
+a=0
+b=1
+for i in range(1,22):
+    print(b)
+    pomocniczna = a+b
+    a=b
+    b=pomocniczna
+#ciąg Fibonacciego
+"""
+"""
+b = 1
+a = int(input("Podaj liczbe: "))
+if a<0:
+    print("nie istnieje silnia z liczby ujemnej")
+else:
+    for i in range(1,a+1):
+        b = b*i
+    print(b)
+"""
+"""
+liczba = int(input("Podaj liczbe: "))
+suma = 0
+while liczba >0:
+    a = liczba%10
+    suma=suma*10+a
+    liczba = liczba//10
+print(suma)
+"""
+
+lista = [10,20,30,40,50,60,70,80,90,100]
+for liczba in lista[1::2]:
+    print(liczba, end=" ")
+"""
+
+liczba = int(input("liczba: "))
+for i in range(1,liczba+1):
+    print(i**3)
+    """
+"""
+for i in range(1,6):
+    for x in range(1,i+1):
+        print("*", end=" ")
+    print()
+for y in range(1,5):
+    for z in range(5,y,-1):
+        print("*", end=" ")
+    print()
+"""
+"""
+def wypisz():
+    print("Hello world")
+ wypisz()
+def wypisz1(imie,wiek):
+    print("Mam na imie:",imie, "mam tyle lat:", wiek)
+#wypisz1("Adam",16)
+def wypisz2(imie,wiek=20):
+    print("Mam na imie:",imie, "mam tyle lat:", wiek)
+#wypisz2("Adam",16)
+#wypisz2("Adam")
+def dodawanie(n):
+    if n>0:
+        return n + dodawanie(n-1)
+    else:
+        return 0
+print(dodawanie(10))
+def iloczyn(n):
+    if n>0:
+        return n * iloczyn(n-1)
+    else:
+        return 1
+print(iloczyn(5))
+"""
+a = int(input("Podaj n: "))
+wynik=1
+for i in range(1,a+1):
+    wynik = wynik *i
+print("silna od N wynosi: ", wynik)
+
+n = int(input("Podaj długość choinki "))
+for i in range(1,n+1):
+    for x in range(n,i-1,-1):
+        print("*", end=" ")
+    print()
+"""
+n = int(input("Podaj n: "))
+silnia=1
+for i in range(1,n+1):
+    silnia = silnia * i
+print(silnia)
+"""
+b = int(input("podaj liczbe:"))b
+while b>0:
+    x = b%10
+    print(x, end=" ")
+    b = b//10
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,3 +1,4 @@
+from random import randint
 """"
 def hello(name):
     print(f"Hello {name}")
@@ -136,6 +137,48 @@ print("sekund: ", r1)
 x=0
 for x in range(0,4):
     print(x)
+a = int(input("Podaj długosc choinki: "))
+for i in range(1,a+1):
+    for x in range(1,i):
+        print("*", end=" ")
+    print()
+
+t = int(input("podaj liczbe: "))
+o=0
+wynik = 0
+
+
+
+
+
+def silnia(n):
+    if n > 1:
+        return n*silnia(n-1)
+    return 1
+print(silnia(4))
+
+qa=randint(1,10)
+b=0
+while a!=b:
+    b = int(input("Podaj b: "))
+    if b>a:
+        print("podana liczba jest za duża")
+    elif b<a:
+        print("podana liczba jest za mała")
+    else:
+        print("brawo zgadłeś")
+lista=[]
+y=6
+for i in range(0,6):
+    y=y-1
+    print(i,y)
+for i in range(1,6):
+    a=randint(2,9)
+    lista.append(a)
+
+print(lista)
+print(len(lista))
+print(lista[-1])
 
 
 
