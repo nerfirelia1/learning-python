@@ -19,6 +19,7 @@ print()
 print("silnia wynosi: ",silnia(5))
 print("dodawanie kolejnych n wynosi: ",dodawanie(10))
 """
+"""
 
 def fibonacci(n):
     if n==0:
@@ -167,3 +168,66 @@ def wypisz(x):
     for i in b:
         print(i)
 wypisz(a)
+"""
+
+lista=["czerwony", "niebieski","","zielony", "", "brązowy"]
+def funkcja(x):
+    for i in x:
+        if i == "":
+            lista.remove(i)
+    return x
+print(funkcja(lista))
+
+a = "aBC34$%,asBy03??"
+def zwroc(x):
+    b = ""
+    for i in x:
+        j=i.isalpha()
+        if j==True:
+            b=b+i
+    return b
+print(zwroc(a))
+
+samochod={"marka":"Ford","model":"mustang","rok":1965}
+print(samochod)
+klucze=["dziesięć","dwadzescia","trzydziesci","czterdziesci"]
+wartosci=[10,20,30,40]
+slownik=dict(zip(klucze,wartosci))
+print(slownik)
+slownik2=dict()
+for i in range(len(klucze)):
+    slownik2.update({klucze[i]:wartosci[i]})
+print(slownik2)
+klasa={
+    "klasa":{
+        "imie":"Adam","oceny":{
+            "Matematyka":5,
+            "Polski":3
+        }
+    }
+}
+print(klasa)
+zbior1={1,2,3,4,5}
+zbior2={3,4,5,6,7}
+print(zbior1.intersection(zbior2))
+print(zbior1.union(zbior2))
+print(zbior1.symmetric_difference(zbior2))
+print(zbior1.difference(zbior2))
+zbior1.difference_update({1,2,3})
+print(zbior1)
+krotka=(1,2,3,4,5)
+print(krotka[2])
+#krotka[2]=10
+print(krotka)
+krotka=krotka[::-1]
+print(krotka)
+krotka2=([10,20,30],(5,15,25))
+print(krotka2[0][1])
+print(krotka2[1][0])
+krotka3=("jabłko",[10,20,30],(5,15,25))
+print(krotka3[1][2])
+krotka4=(50)
+print(krotka4)
+krotka5=(1,2,3,4)
+a,b,c,d=krotka5
+print(a,b,c,d)
