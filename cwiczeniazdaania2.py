@@ -35,4 +35,10 @@ lista = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 print(lista[-1])
 for liczba in lista[0::3]:
     print(liczba, end=" ")
+liczby = [5, 6.5, 7, 8, 9, 10]
+
+print(liczby[-1])
+print(liczby.remove(5,10)
+
+
 

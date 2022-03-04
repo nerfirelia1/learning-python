@@ -169,7 +169,7 @@ def wypisz(x):
         print(i)
 wypisz(a)
 """
-
+"""
 lista=["czerwony", "niebieski","","zielony", "", "brązowy"]
 def funkcja(x):
     for i in x:
@@ -206,6 +206,7 @@ klasa={
         }
     }
 }
+
 print(klasa)
 zbior1={1,2,3,4,5}
 zbior2={3,4,5,6,7}
@@ -215,19 +216,161 @@ print(zbior1.symmetric_difference(zbior2))
 print(zbior1.difference(zbior2))
 zbior1.difference_update({1,2,3})
 print(zbior1)
+
 krotka=(1,2,3,4,5)
-print(krotka[2])
-#krotka[2]=10
 print(krotka)
 krotka=krotka[::-1]
 print(krotka)
 krotka2=([10,20,30],(5,15,25))
-print(krotka2[0][1])
+print(krotka2[0])
 print(krotka2[1][0])
 krotka3=("jabłko",[10,20,30],(5,15,25))
 print(krotka3[1][2])
+print(krotka3[2][1])
 krotka4=(50)
 print(krotka4)
 krotka5=(1,2,3,4)
 a,b,c,d=krotka5
 print(a,b,c,d)
+"""
+"""
+def funkcja(a):
+    if a==2:
+        return True
+    if a>1:
+        for i in range(2,a):
+            if a%i==0:
+                return False
+            return True
+
+    return False
+#print(funkcja(7))
+
+def funkcja1(x):
+    a=0
+    if x>0:
+        for i in range(1,x):
+            if x%i==0:
+                a=a+i
+        if x==a:
+            return True
+        else:
+            return False
+    return False
+print(funkcja1(13))
+
+def czynnikipierwsze(x):
+    if x > 0:
+        k=2
+        while x!=1:
+            while x%k==0:
+                print(k)
+                x=x//k
+            k=k+1
+
+czynnikipierwsze(120)
+"""
+def nwd(a,b):
+    while a!=b:
+        c=max(a,b)
+        d=min(a,b)
+        r=c-d
+        e = max(r,d)
+        f = min(r,d)
+        a=e
+        b=f
+    return a
+#print(nwd(1000,1))
+"""
+def nwd1(a,b):
+    while b>0:
+        r = a%b
+        a=b
+        b=r
+    return a
+print(nwd1(1000,1))
+
+def nwd2(a,b):
+    if b==0:
+        return a
+    return nwd2(b,a%b)
+
+print(nwd2(1000,1))
+
+def nww(a,b):
+    return (a*b)//nwd2(a,b)
+print(nww(12,24))
+"""
+
+"""
+def funkcja(x,y):
+    lista = []
+    i=0
+    while x>0:
+        while y[i]<=x:
+            lista.append(y[i])
+            x-=y[i]
+        i=i+1
+    return lista
+lista1=[500,200,100,50,20,10,5,2,1]
+print(funkcja(49,lista1))
+"""
+"""
+lista=[6,5,7,4,8,3,9,2,1]
+def bubble(lista):
+    for i in range(len(lista)):
+        for j in range(len(lista)-i-1):
+            if  lista[j]> lista[j+1]:
+                lista[j+1],lista[j]=lista[j],lista[j+1]
+    return lista
+print(bubble(lista))
+#zrobic od lewo i od prawo itd
+"""
+
+#lista=[6,5,7,4,8,3,9,2,1]
+"""
+#zrobic na maxi tu na dole
+def wybor(lista):
+    for i in range(len(lista)):
+        mini=i
+        for j in range(i+1,len(lista)):
+            if lista[mini] > lista[j]:
+                mini=j
+        lista[i],lista[mini]=lista[mini],lista[i]
+    return lista
+print(wybor(lista))
+"""
+lista=[6,5,7,4,8,3,9,2,1]
+def insertion(lista):
+    for i in range(1,len(lista)):
+        liczba=lista[i]
+        while i>0 and lista[i-1] > liczba:
+            lista[i]=lista[i-1]
+            i=i-1
+        lista[i]=liczba
+    return lista
+print(insertion(lista))
+
+def palindrom(x):
+    i=0
+    j=len(x)-1
+    while i<j:
+        if x[i]==x[j]:
+            i = i + 1
+            j = j - 1
+        else:
+            return "nie"
+    return "tak"
+print(palindrom("kajakak"))
+def palindrom2(x):
+     x2=x[::-1]
+     if x==x2:
+         return True
+     return False
+print(palindrom2("kajako"))
+
+def anagram(x,y):
+    if sorted(x)==sorted(y):
+        return True
+    return False
+print(anagram("matura", "traumay"))
