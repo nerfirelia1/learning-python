@@ -173,32 +173,55 @@ print(lista)
 print(len(lista))
 print(lista[-1])
 
+lsita =[23,45,1,2,8,3,11,19]
+def bubble(lsita):
+    for i in range(lsita):
+        for x in range(lsita):
+            if lsita[x] > lsita[x+1]:
+                lsita[x+1],lsita[x]=lsita[x],lsita[x+1]
+    return lsita
+print(bubble(lsita))
+
+szyfrogram = []
+for i in szyfrogram:
+    szyfrogram
+
+def pierwsza(x: int) -> bool:
+    if x<=1:
+        return False
+    for i in range(2,int(x**0.5) +1):
+        if x%i==0:
+            return True
+    return False
+
+#sitooooooooootreresa
+tab=[]
+for i in range(101):
+    tab.append(True)
 
 
+    def sito(a: int, b: int, tab: list) -> list:
+        tab[0] = False
+        tab[1] = False
+        for i in range(2, int(b ** 0.5) + 1):
+            if tab[i] == True:
+                j = i * 2
+                while j <= b:
+                    tab[j] = False
+                    j += i
+        for i in range(a, b + 1):
+            if tab[i]:
+                print(i, "jest liczba pierwsza")
+        return tab
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    # rozklad
+    def czynniki_pierwsze(n: int) -> list:
+        k = 2
+        tab = []
+        while n > 1:
+            while n % k == 0:
+                tab.append(k)
+                n //= k
+            k += 1
+        return tab

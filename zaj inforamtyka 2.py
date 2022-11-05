@@ -1,4 +1,4 @@
-"""
+
 b = int(input("podaj liczbe:"))
 while b>0:
     x = b%10
@@ -289,7 +289,8 @@ def nwd1(a,b):
         b=r
     return a
 print(nwd1(1000,1))
-
+print(nwd1(119,187))
+""""
 def nwd2(a,b):
     if b==0:
         return a
@@ -315,21 +316,27 @@ def funkcja(x,y):
 lista1=[500,200,100,50,20,10,5,2,1]
 print(funkcja(49,lista1))
 """
+
+lista=[6,5,7,4,8,3]
+
 """
-lista=[6,5,7,4,8,3,9,2,1]
 def bubble(lista):
     for i in range(len(lista)):
         for j in range(len(lista)-i-1):
             if  lista[j]> lista[j+1]:
                 lista[j+1],lista[j]=lista[j],lista[j+1]
+                
     return lista
-print(bubble(lista))
+"""
+"""
+"""
 #zrobic od lewo i od prawo itd
 """
 
-#lista=[6,5,7,4,8,3,9,2,1]
+lista=[6,5,7,4,8,3,9,2,1]
 """
 #zrobic na maxi tu na dole
+"""
 def wybor(lista):
     for i in range(len(lista)):
         mini=i
@@ -339,7 +346,8 @@ def wybor(lista):
         lista[i],lista[mini]=lista[mini],lista[i]
     return lista
 print(wybor(lista))
-"""
+
+    
 lista=[6,5,7,4,8,3,9,2,1]
 def insertion(lista):
     for i in range(1,len(lista)):
@@ -368,9 +376,243 @@ def palindrom2(x):
          return True
      return False
 print(palindrom2("kajako"))
-
+"""
 def anagram(x,y):
     if sorted(x)==sorted(y):
         return True
     return False
-print(anagram("matura", "traumay"))
+#print(anagram("matura", "traumay"))
+
+def sortowanie(x,y):
+    x1=list(x)
+    for i in range(len(x1)):
+        for j in range(len(x1)-i-1):
+            if x1[j]>x1[j+1]:
+                x1[j],x1[j+1]=x1[j+1],x1[j]
+    x2="".join(x1)
+    y1=list(y)
+    for k in range(len(y1)):
+        for z in range(len(y1)-k-1):
+            if y1[z] > y1[z+1]:
+                y1[z],y1[z+1]=y1[z+1],y1[z]
+    y2="".join(y1)
+    print(x2,y2)
+    if x2==y2:
+        return True
+    return False
+print(sortowanie("matura","trauma"))
+def szyfr(x):
+    x1=list(x)
+    for i in range(0,len(x)-1,2):
+        x1[i+1],x1[i]=x1[i],x1[i+1]
+    x2="".join(x1)
+    return x2
+print(szyfr("konrad"))
+print(szyfr("konradf"))
+def szyfrcezara(x,y):
+    x1=list(x)
+    s=""
+    for i in x1:
+        n=ord(i)
+        if  n>=65 and n<=90:
+            n = n + y
+            while n>90:
+                n=n-26
+            while n<65:
+                n=n+26
+        s=s+chr(n)
+
+    return s
+print(szyfrcezara("ALA MA KOTA", -3))
+#małe litery - zrobić szyfrem
+
+def szukaj(c,x):
+    a=0
+    b=len(c)-1
+    while a<=b:
+        p = (a + b) // 2
+        if c[p]==x:
+            return True
+        elif c[p]>x:
+            b=p-1
+        else:
+            a=p+1
+    return False
+print(szukaj([1,2,3,5,6,7,8,9,11],9))
+"""
+
+def pierwsza(x: int) -> bool:
+    if x<=1:
+        return False
+    for i in range(2,int(x**0.5) +1):
+        if x%i==0:
+            return True
+    return False
+print(pierwsza(20))
+#sitooooooooootrera
+tab=[]
+for i in range(300):
+    tab.append(True)
+
+
+    def sito(a: int, b: int, tab: list) -> list:
+        tab[0] = False
+        tab[1] = False
+        for i in range(2, int(b ** 0.5) + 1):
+            if tab[i] == True:
+                j = i * 2
+                while j <= b:
+                    tab[j] = False
+                    j += i
+        for i in range(a, b + 1):
+            if tab[i]:
+                print(i, "jest liczba pierwsza")
+
+
+#liczba doskonala
+def czydoskonala(x: int) -> bool:
+    s = 1
+    for i in range(2, int(x**0.5) + 1):
+        if x % i == 0:
+            s += i
+            s += x//i
+    if s == x:
+        return True
+    return False
+
+
+#rozklad
+def czynniki_pierwsze(n: int) -> list:
+    k = 2
+    tab = []
+    while n > 1:
+        while n % k == 0:
+            tab.append(k)
+            n //= k
+        k += 1
+    return tab
+print(czynniki_pierwsze(24))
+#nwd, nww
+def nwd_iter(a: int, b: int) -> int:
+    while b!=0:
+        a, b = b, a % b
+    return a
+print(nwd_iter(24,40))
+
+
+def nww(a: int, b: int) -> int:
+    return a*b//nwd_iter(a,b)
+
+def silnia(n: int) -> int:
+    return 1
+
+def poteguj(x: int , y:int) -> int:
+    a=x
+    i=1
+    while i<y:
+        x=a*x
+        i+=1
+    return x
+print(poteguj(2,4))
+
+def nwd(a: int , b: int)-> int:
+    while b!=0:
+        a,b=b,a%b
+    return a
+
+def nwww(a:int , b: int)-> int:
+    return a*b//nwd(a,b)
+print(nwd(10,15))
+print(nwww(4,18))
+
+def czynnikipierwszeesa(x: int) -> list:
+    lista=[]
+    k=2
+    for i in range(2,x):
+        while x%i==0:
+            lista.append(k)
+            x=x//k
+        k=k+1
+    return lista
+print(czynnikipierwszeesa(24))
+
+def pierwsza11(x: int) -> bool:
+    if x<=1:
+        return True
+    for i in range(2,int(x**0.5) +1):
+        if x%i==0:
+            return False
+    return True
+
+
+def pierwsza(x: int) -> bool:
+    if x <= 1:
+        return False
+    for i in range(2, int(x**0.5) + 1):
+        if x % i == 0:
+            return False
+    return True
+print(pierwsza11(20))
+print(pierwsza11(2))
+print(pierwsza(2))
+print(pierwsza(11))
+print(pierwsza11(20))
+print(pierwsza11(1))
+
+
+import math
+def pierw(n: float, eps: float) -> float:   #newton - rhapson
+    a = 1.0
+    b = n
+    while math.fabs(a-b) >= eps:
+        # print((a+b)/2)
+        a = (a+b)/2
+        b = n / a
+    return (a+b)/2
+
+print(pierw(3, 0.001))
+
+def f(x: float) -> float:
+    return 2*x*x*x - 2*x - 8
+
+
+def bisekcja(a: float, b: float, eps: float) -> float:
+    if f(a) * f(b) > 0:
+        return None
+    while b-a >= eps:
+        c = (a+b)/2
+        print(c)
+        if(c) == 0.0:
+            return c
+        if f(a) * f(c) < 0:
+            b = c
+        else:
+            a = c
+    return c
+
+print(bisekcja(-2, 5, 0.0001))
+
+def char_tab(tab: str) -> str:
+    tab = list(tab)
+    for i in range(len(tab)):
+        for j in range(len(tab) - i - 1):
+            if tab[j] > tab[j + 1]:
+                 tab[j+1], tab[j] = tab[j], tab[j+1]
+    return "".join(tab)
+print(char_tab("ala"))
+
+#ASCII
+print(ord('A'))
+print(chr(65))
+
+def cezar(slowo:str, klucz:int)->str:
+    a=list(slowo)
+    wynik=""
+    for i in a:
+        if ord(i) >=65 and ord(i)<=90:
+            wynik=wynik+chr((ord(i)+klucz-65)%26 +65)
+        elif ord(i)>=97 and ord(i)<=122:
+            wynik=wynik+ chr((ord(i)+klucz-97)%26 +97)
+        else:
+            wynik+=i
+print(cezar(""))
