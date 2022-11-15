@@ -86,36 +86,21 @@ def Cezar(tekst: str, klucz: int) -> str:
 print(Cezar("ABCXYZabcxyz Ala ma^psa, a Konrad:)ma kota", 8))
 
 
-def zdziesietnegosystemu(n: int, system: int) -> str:
-    wynik = ""
-    while n > 0:
-        r = n % system
-        if r <= 9:
-            wynik = wynik + str(r)
+def zdziesietnegosystemu(n:int,system:int) -> str:
+    wynik =""
+    while n>0:
+        r=n%system
+        if r >=10:
+            wynik = wynik + chr(r+55)
         else:
-            wynik = chr(55 + r) + wynik
-        n = n // system
+            wynik = wynik + str(r)
     wynik = wynik[::-1]
     return wynik
 
 
-print(zdziesietnegosystemu(1875, 3))
+print(zdziesietnegosystemu(1435,6))
 
 
-def NaDzies(n: str, sys: int) -> int:
-    wyn = 0
-    dl = 0
-    for i in range(len(n) - 1, -1, -1):
-        print(i)
-        x = n[i]
-        if ord(x) >= 48 and ord(x) <= 57:
-            wyn += int(x) * sys ** dl
-        elif ord(x) >= 65 and ord(x) <= 90:
-            wyn += (ord(x) - 55) * sys ** dl
-        elif ord(x) >= 97 and ord(x) <= 122:
-            wyn += (ord(x) - 87) * sys ** dl
-        dl += 1
-    return wyn
 
 
 print(NaDzies("12211", 3))
@@ -163,7 +148,7 @@ def palindromek(n: str) -> bool:
 
 print(palindromek("kajaasdk"))
 
-
+#sortowania--------------------------------------
 def babelkowesortowanie(n: list) -> list:
     for i in range(len(n)):
         for j in range(len(n) - 1 - i):
@@ -171,11 +156,20 @@ def babelkowesortowanie(n: list) -> list:
                 n[j], n[j + 1] = n[j + 1], n[j]
     return n
 
+def wybor(lista):
+    for i in range(len(lista)):
+        mini=i
+        for j in range(i+1,len(lista)):
+            if lista[mini] > lista[j]:
+                mini=j
+        lista[i],lista[mini]=lista[mini],lista[i]
+    return lista
+print(wybor(lista))
 
 print(babelkowesortowanie([2, 6, 42, 57, 5, 2, 8, 3, ]))
 a = "nosiema"
 print(len(a))
-
+#sortowania-------------------------------
 
 def NWD(x, y):
     while y > 0:
@@ -198,3 +192,4 @@ print(nwd_iter(32, 24))
 
 
 def nww(a, b):
+    return a*b//nwd_iter()
