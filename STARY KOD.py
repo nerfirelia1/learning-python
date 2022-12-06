@@ -439,7 +439,7 @@ def szukaj(c,x):
             a=p+1
     return False
 print(szukaj([1,2,3,5,6,7,8,9,11],9))
-"""
+
 
 def pierwsza(x: int) -> bool:
     if x<=1:
@@ -615,4 +615,18 @@ def cezar(slowo:str, klucz:int)->str:
             wynik=wynik+ chr((ord(i)+klucz-97)%26 +97)
         else:
             wynik+=i
-print(cezar(""))
+    return wynik
+
+def selection(tab: list) -> list:
+    for i in range(len(tab)):
+        mini=i
+        for j in range(i+1,len(tab)):
+            if tab[mini] > tab[j]:
+                mini=j
+        tab[i], tab[mini] = tab[mini], tab[i]
+        return tab
+print(selection([2,3,6,4,3436,2,1]))
+
+sesses=[2,75,3,6,8,6]
+for i in range(len(sesses)):
+    print(sesses[i])
