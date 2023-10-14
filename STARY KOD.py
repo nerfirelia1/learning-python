@@ -401,6 +401,7 @@ def sortowanie(x,y):
         return True
     return False
 print(sortowanie("matura","trauma"))
+print(sortowanie("maturaa","trauma"))
 def szyfr(x):
     x1=list(x)
     for i in range(0,len(x)-1,2):
@@ -630,3 +631,30 @@ print(selection([2,3,6,4,3436,2,1]))
 sesses=[2,75,3,6,8,6]
 for i in range(len(sesses)):
     print(sesses[i])
+
+def sumaliczb(n):
+    sumaparzystych = 0
+    sumanieparzystych=0
+    for i in range(2,n+1):
+        if i%2==0:
+            sumaparzystych=sumaparzystych+i
+        else:
+            sumanieparzystych=sumanieparzystych+i
+    sumanieparzystych = sumanieparzystych +1
+    return "suma parzystych wynosi: ", sumaparzystych , "suma nieparzystych wynosi: ", sumanieparzystych
+print(sumaliczb(10))
+
+def rozkladnapierwszeczynniki(x):
+    wspolczynniki=[]
+    while x>1:
+        while x%i==0:
+            wspolczynniki+=[i]
+            x=x//i
+    return wspolczynniki
+
+print(rozkladnapierwszeczynniki(100))
+for i in range(10):
+    print (i)
+A=[1,2,3,5,6]
+n=len(A)
+print(n)
