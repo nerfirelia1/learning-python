@@ -290,7 +290,7 @@ def nwd1(a,b):
     return a
 print(nwd1(1000,1))
 print(nwd1(119,187))
-""""
+
 def nwd2(a,b):
     if b==0:
         return a
@@ -299,7 +299,7 @@ def nwd2(a,b):
 print(nwd2(1000,1))
 
 def nww(a,b):
-    return (a*b)//nwd2(a,b)
+    return (a*b)//nwd1(a,b)
 print(nww(12,24))
 """
 
@@ -642,7 +642,7 @@ def sumaliczb(n):
             sumanieparzystych=sumanieparzystych+i
     sumanieparzystych = sumanieparzystych +1
     return "suma parzystych wynosi: ", sumaparzystych , "suma nieparzystych wynosi: ", sumanieparzystych
-print(sumaliczb(10))
+
 
 def rozkladnapierwszeczynniki(x):
     wspolczynniki=[]

@@ -111,6 +111,9 @@ print(nwd_iter(20,8))
 #Spoko stronka z algorytmami na maturke + wyjasnienia pojec - https://maturka.it/algorytmy/
 
 def NWW(a:int, b: int) -> int:
-    return a*b//(nwd_iter(a,b))
+    return a*b//nwd_iter(a,b)
+print(NWW(14,28))
 
-NWW(14,28)
+def Fibonacci(n:int) ->  n:
+    
+
