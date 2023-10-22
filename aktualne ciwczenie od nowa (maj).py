@@ -24,7 +24,7 @@ def rozkladnapierwszeczynniki(x):
             x=x//i
         i=i+1
     return wspolczynniki
-
+print(rozkladnapierwszeczynniki(100))
 
 def spawdzpierwsza(x) -> bool:
     if x==2:
@@ -35,14 +35,10 @@ def spawdzpierwsza(x) -> bool:
     return True
 
 tab = []
-for i in range(101):
+for i in range(360):
     tab.append(True)
-print(tab)
 
-
-def sito(a: int, b: int, tab: list) -> list:
-    tab[0] = False
-    tab[1] = False
+def sito(a: int, b: int, tab: list) -> int:
     for i in range(2, int(b ** 0.5) + 1):
         if tab[i] == True:
             j = i * 2
@@ -51,10 +47,10 @@ def sito(a: int, b: int, tab: list) -> list:
                 j += i
     for i in range(a, b + 1):
         if tab[i]== True:
+            print(tab[i])
             print(i, "jest liczba pierwsza")
-    return tab
-sito(10,100,tab)
-
+    return "no siemea"
+sito(20,120,tab)
 def pierwsza(x:int) -> bool:
     if x==1 or x==2:
         return True
@@ -62,7 +58,7 @@ def pierwsza(x:int) -> bool:
         if x%i==0:
             return False
     return True
-print(pierwsza(13))
+print(pierwsza(179))
 
 def doskonała(x:int) -> bool:
     suma=0
@@ -88,7 +84,7 @@ def silniareku(n):
     if n > 1:
         return n*silniareku(n-1)
     return 1
-print(silniareku(4))
+print(silniareku(1))
 
 def sumacyfrliczby(x:int)->int:
     suma=0
@@ -106,7 +102,7 @@ def nwd_iter(a: int, b: int) -> int:
     while b > 0:
         a, b = b, a % b
     return a
-print(nwd_iter(20,8))
+print(nwd_iter(8,20))
 
 #Spoko stronka z algorytmami na maturke + wyjasnienia pojec - https://maturka.it/algorytmy/
 
@@ -114,6 +110,75 @@ def NWW(a:int, b: int) -> int:
     return a*b//nwd_iter(a,b)
 print(NWW(14,28))
 
-def Fibonacci(n:int) ->  n:
-    
+def fib_i(n):
+    if n == 0: return 0
+    elif n == 1: return 1
+    p, w = 0, 1
+    for i in range(n-1):
+        p, w = w, p+w
+        print(p,w)
+    return w
+print(fib_i(0))
+
+def anagram(A:str,B:str) -> str:
+    A=list(A)
+    B=list(B)
+    for n in range(len(A)):
+        for n in range(len(A)-1-n):
+            if A[n]>A[n+1]:
+                A[n],A[n+1]=A[n+1],A[n]
+    for m in range(len(B)):
+        for m in range(len(B)-1-m):
+            if B[m]>B[m+1]:
+                B[m],B[m+1]=B[m+1],B[m]
+    print(A)
+    print(B)
+    if A==B:
+        return "tak"
+    return "nie"
+print(anagram("matura","traums"))
+a=[4,67676,3434,7,76,7,6]
+print(len(a))
+
+
+
+
+def Anagram(A:str, B:str) -> bool:
+    A=list(A)
+    B=list(B)
+    for i in range(len(A)-1):
+        for j in range(len(A)-1-i):
+            if A[j]>A[j+1]:
+                A[j],A[j+1]=A[j+1],A[j]
+    for i in range(len(B)-1):
+        for j in range(len(B)-1-i):
+            if B[j]>B[j+1]:
+                B[j],B[j+1]=B[j+1],B[j]
+    if A==B:
+        return True
+    return False
+print(Anagram("maturs","matura"))
+A=[1,5,7,5,3]
+for i in range(len(A)):
+    print(i)
+
+def selection_sort(n:list)->list:
+    for i in range(len(n)):
+        min_i=i
+        for j in range(i+1,len(n)):
+            if n[min_i]>n[j]:
+                n[min_i],n[j]=n[j],n[min_i]
+    return n
+print(selection_sort([2,0,5,3,2,56,327813678]))
+
+def rozkladnapierwsze(x:int)-> list:
+    rozklad = []
+    for i in range(2,x):
+        while x%i==0:
+            rozklad=rozklad+[i]
+            x=x//i
+    return rozklad
+print(rozkladnapierwsze(18))
+
+
 

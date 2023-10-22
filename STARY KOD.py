@@ -1,3 +1,12 @@
+def pierwsza(x:int) -> bool:
+    if x==1 or x==2:
+        return True
+    for i in range(2,x):
+        if x%i==0:
+            return False
+    return True
+print(pierwsza(179))
+
 
 b = int(input("podaj liczbe:"))
 while b>0:
@@ -382,7 +391,7 @@ def anagram(x,y):
         return True
     return False
 #print(anagram("matura", "traumay"))
-
+"""
 def sortowanie(x,y):
     x1=list(x)
     for i in range(len(x1)):
@@ -400,8 +409,9 @@ def sortowanie(x,y):
     if x2==y2:
         return True
     return False
-print(sortowanie("matura","trauma"))
+print(sortowanie("matura","traumaa"))
 print(sortowanie("maturaa","trauma"))
+"""
 def szyfr(x):
     x1=list(x)
     for i in range(0,len(x)-1,2):

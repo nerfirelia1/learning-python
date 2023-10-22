@@ -1,5 +1,15 @@
 from ast import pattern
 from sys import platlibdir
+def pierwsza(x:int) -> bool:
+    if x==1 or x==2:
+        return True
+    for i in range(2,x):
+        if x%i==0:
+            return False
+    return True
+print(pierwsza(179))
+
+
 from random import randint
 import math
 print(3)
@@ -418,5 +428,29 @@ def sito(a: int, b: int, tab: list) -> list:
             print(i, "jest liczba pierwsza")
     return tab
 sito(10,100,tab)
+
+def sortowanie(x,y):
+    x1=list(x)
+    for i in range(len(x1)):
+        for j in range(len(x1)-i-1):
+            if x1[j]>x1[j+1]:
+                x1[j],x1[j+1]=x1[j+1],x1[j]
+    x2="".join(x1)
+    y1=list(y)
+    for k in range(len(y1)):
+        for z in range(len(y1)-k-1):
+            if y1[z] > y1[z+1]:
+                y1[z],y1[z+1]=y1[z+1],y1[z]
+    y2="".join(y1)
+    print(x2,y2)
+    if x2==y2:
+        return True
+    return False
+print(sortowanie("matura","traumaa"))
+print(sortowanie("maturaa","trauma"))
+for i in range(10):
+    T.append(int(input("Podaj liczbe: ")))
+def NWD2(t):
+
 
 
