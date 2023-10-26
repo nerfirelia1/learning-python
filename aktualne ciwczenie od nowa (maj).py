@@ -1,19 +1,3 @@
-n=[2,5,23,2,1,0]
-def bubble_sort(n:list)-> list:
-    for i in range(len(n)):
-        for j in range(len(n)-i-1):
-            if n[j]>n[j+1]:
-                n[j],n[j+1]=n[j+1],n[j]
-    return n
-
-lista=[1,3,5,6,45,0,3]
-def selection_sort(lista:list)-> list:
-    for i in range(len(lista)):
-        mini=i
-        for j in range(i+1,len(lista)):
-            if lista[mini]>lista[j]:
-                lista[mini],lista[j]=lista[j],lista[mini]
-    return lista
 
 def rozkladnapierwszeczynniki(x):
     wspolczynniki=[]
@@ -140,45 +124,40 @@ print(anagram("matura","traums"))
 a=[4,67676,3434,7,76,7,6]
 print(len(a))
 
+def insertion(lista:list)-> list:
+    for i in range(1,len(list)):
+        liczba = lista[i]
+        while i>0 and lista[i-1] > liczba:
+            lista[i] = lista[i-1]
+            i=i-1
+        lista[i] = liczba
+    return lista
 
-
-
-def Anagram(A:str, B:str) -> bool:
-    A=list(A)
-    B=list(B)
-    for i in range(len(A)-1):
-        for j in range(len(A)-1-i):
-            if A[j]>A[j+1]:
-                A[j],A[j+1]=A[j+1],A[j]
-    for i in range(len(B)-1):
-        for j in range(len(B)-1-i):
-            if B[j]>B[j+1]:
-                B[j],B[j+1]=B[j+1],B[j]
-    if A==B:
-        return True
-    return False
-print(Anagram("maturs","matura"))
-A=[1,5,7,5,3]
-for i in range(len(A)):
-    print(i)
-
-def selection_sort(n:list)->list:
+n=[2,5,23,2,1,0]
+def bubble_sort(n:list)-> list:
     for i in range(len(n)):
-        min_i=i
-        for j in range(i+1,len(n)):
-            if n[min_i]>n[j]:
-                n[min_i],n[j]=n[j],n[min_i]
+        for j in range(len(n)-i-1):
+            if n[j]>n[j+1]:
+                n[j],n[j+1]=n[j+1],n[j]
     return n
-print(selection_sort([2,0,5,3,2,56,327813678]))
 
-def rozkladnapierwsze(x:int)-> list:
-    rozklad = []
-    for i in range(2,x):
-        while x%i==0:
-            rozklad=rozklad+[i]
-            x=x//i
-    return rozklad
-print(rozkladnapierwsze(18))
+lista=[1,3,5,6,45,0,3]
+def selection_sort(lista:list)-> list:
+    for i in range(len(lista)):
+        mini=i
+        for j in range(i+1,len(lista)):
+            if lista[mini]>lista[j]:
+                lista[mini],lista[j]=lista[j],lista[mini]
+    return lista
 
-
-
+def reszta_zachłannie(x,y):
+    lista = []
+    i=0
+    while x>0:
+        while y[i]<=x:
+            lista.append(y[i])
+            x-=y[i]
+        i=i+1
+    return lista
+lista1=[500,200,100,50,20,10,5,2,1]
+print(funkcja(49,lista1))

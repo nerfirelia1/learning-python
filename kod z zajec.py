@@ -448,9 +448,5 @@ def sortowanie(x,y):
     return False
 print(sortowanie("matura","traumaa"))
 print(sortowanie("maturaa","trauma"))
-for i in range(10):
-    T.append(int(input("Podaj liczbe: ")))
-def NWD2(t):
-
 
 
