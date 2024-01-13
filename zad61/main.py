@@ -72,3 +72,44 @@ with open("wyniki61.txt","a") as file:
     file.write("zadanie 3"+"\n")
     file.write(str(lista_bledy)+ "\n")
 
+
+
+
+ciagi=[]
+with open("ciagi.txt") as file:
+    for line in file:
+        ciagi.append(line)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

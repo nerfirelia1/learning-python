@@ -258,6 +258,16 @@ def wyszukiwanie_binarne(arr,x):
             l=l+1
 print(wyszukiwanie_binarne([1,2,3,4,6,7],5))
 
+def binary_selection_recurrent(list,target,l,r):
+    if l<=r:
+        mid=(l+r)//2
+    if list[mid]==target:
+        return mid
+    elif list[mid]>target:
+        return binary_selection_recurrent(list,target,l,mid-1)
+    elif list[mid]<target:
+        return binary_selection_recurrent(list,target,mid+1,r)
+
 def wspolczynniki(x:int):
     lista=[]
     for i in range(2,x):
@@ -307,3 +317,4 @@ def fib_rek(n):
         return 1
     print(n)
     return fib_rek(n - 1) + fib_rek(n - 2)
+
