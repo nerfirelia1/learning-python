@@ -1,19 +1,21 @@
+def doskonała(x):
+    suma=0
+    for i in range(1,x):
+        if x%i==0:
+            suma+=i
+    if suma==x:
+        return True
+    return False
+print(doskonała(6))
 
-def czy_pierwsza(n):
-    for i in range(2,n):
-        if n%i==0:
-            return "Nie"
-    return "Tak"
-
-def czynniki(x):
+def czyniikipierwsze(x):
+    y=2
     czynniki=[]
-    i=1
     while x>1:
-        i=i+1
-        while x%i==0:
-            czynniki.append(i)
-            x=x/i
+        if x%y==0:
+            while x%y==0:
+                czynniki.append(y)
+                x=x/y
+        y=y+1
     return czynniki
-
-print(czynniki(147))
-
+print(czyniikipierwsze(81))

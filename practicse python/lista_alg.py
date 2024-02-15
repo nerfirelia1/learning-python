@@ -190,6 +190,7 @@ def schHornera(n,T,C):
     for i in range(1,n+1):
         wynik = wynik * C +T[i]
         lista.append(wynik)
+
     return lista
 print(schHornera(3,[1,-3,5],3))
 
@@ -317,4 +318,37 @@ def fib_rek(n):
         return 1
     print(n)
     return fib_rek(n - 1) + fib_rek(n - 2)
+def function(x):
+    return x**2*3
+
+def funkcja(x):
+    return x**2
+def całki_prostokaty(a,b,n,funkcja):
+    suma=0
+    szerokosc_podprzedzialu=(b-a)/n
+    for i in range(n):
+        l=a+i*szerokosc_podprzedzialu
+        suma+=funkcja(l)*szerokosc_podprzedzialu
+    return suma
+print(całki_prostokaty(2,8,7,funkcja))
+
+
+def metoda_trapezow_naiwna(f, a, b, n):
+    delta_x = (b - a) / n
+    wynik = 0.5 * (f(a) + f(b))
+
+    for i in range(1, n):
+        x_i = a + i * delta_x
+        wynik += f(x_i)
+
+    wynik *= delta_x
+    return wynik
+
+# Przykład użycia dla funkcji kwadratowej x^2 na przedziale [0, 2]
+def funkcja_kwadratowa(x):
+    return x**2
+
+a = 0
+b = 2
+liczba_podprzedzialow = 100
 
