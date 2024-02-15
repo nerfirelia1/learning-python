@@ -1,0 +1,25 @@
+zadanie 1
+did
+desired
+destroyed
+devised
+zadanie 2
+wkqoocjqwo
+iujolqzzwr
+udwjtljuip
+tlcpgujurjqk
+yplcjdwotwr
+kqrrfwwcjtl
+mupmwjpqpg
+kqrrfwwcjtl
+wotchfqolwr
+klucz szyfrujacy: 3,7
+klucz deszyfrujacy: 9,15
+klucz szyfrujacy: 1,3
+klucz deszyfrujacy: 1,23
+klucz szyfrujacy: 17,14
+klucz deszyfrujacy: 23,16
+klucz szyfrujacy: 7,0
+klucz deszyfrujacy: 15,0
+klucz deszyfrujacy: 25,13
+klucz szyfrujacy: 25,13
